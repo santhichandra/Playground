@@ -29,6 +29,10 @@ def mysqrt(n, lb=1.0):
 def gcd(x, y):
    return x if (y == 0) else gcd(y, x % y)
 
+# Euclid's Algorithm to find the GCD/HCF of two positive integers with lambda function
+
+gcdL = lambda x, y: x if (y == 0) else gcdL(y, x % y)
+
 if __name__ == "__main__":
   print (fact(8))
   print (factL(8))
@@ -36,3 +40,4 @@ if __name__ == "__main__":
   print (fibL(8))
   print (mysqrt(1234))
   print (gcd(30, 50))
+  print (gcdL(30, 50))
