@@ -24,9 +24,15 @@ def mysqrt(n, lb=1.0):
         lb, rb = rb, lb
     return lb if ((rb - lb) < 0.000001) else mysqrt(n, (lb+rb)/2.0)
 
+# Euclid's Algorithm to find the GCD/HCF of two positive integers
+
+def gcd(x, y):
+   return x if (y == 0) else gcd(y, x % y)
+
 if __name__ == "__main__":
   print (fact(8))
   print (factL(8))
   print (fib(8))
   print (fibL(8))
   print (mysqrt(1234))
+  print (gcd(30, 50))
